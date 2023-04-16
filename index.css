@@ -21,8 +21,13 @@
   font-size: 20px;
 }
 .todo-container > button {
-  background-color: blue;
+  background-color: rgb(162, 162, 238);
   color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.todo-container > button:hover {
+  background-color: blue;
 }
 .todo-container > input:focus {
   outline: none;

@@ -24,15 +24,16 @@ function addTask() {
   if (input.value && time.value) {
     div.appendChild(p1);
     div.appendChild(p2);
+    let button = document.createElement("button");
+    button.setAttribute("onclick", "deleteElement(this)");
+    let span = document.createElement("span");
+    span.className = "material-icons";
+    span.innerText = "delete_outline";
+    button.appendChild(span);
+    div.appendChild(button);
+
+    unShift(div);
   }
-  let button = document.createElement("button");
-  button.setAttribute("onclick", "deleteElement(this)");
-  let span = document.createElement("span");
-  span.className = "material-icons";
-  span.innerText = "delete_outline";
-  button.appendChild(span);
-  div.appendChild(button);
-  unShift(div);
 }
 function deleteElement(element) {
   var div = element.parentNode;
